@@ -19,7 +19,7 @@ export class LoginComponent{
   ngOnInit():void{
     this.formLogin = this.fb.group(
       {
-        valueUsername: ['',Validators.required],
+        valueEmail: ['',Validators.required],
         valuePassword: ['', Validators.required],
       });
   };
@@ -48,20 +48,18 @@ export class LoginComponent{
 
       }
       return;
-    };
-    console.log(this.formLogin.value);
-    const {valueUsername, valuePassword} = this.formLogin.value;
+    }
+    const {valueEmail, valuePassword} = this.formLogin.value;
 
-    const body = {"username":valueUsername,"password":valuePassword};
+    const body = {"email":valueEmail,"password":valuePassword};
 
     this.http.post(configUrl.login, body, this.httpOptions).subscribe({
       next:(response:any) =>{
         if (response && response.access_token){
          localStorage.setItem('token',response.access_token)
-          console.log(response.access_token)
-          this.router.navigate(['register']); // Reemplaza 'otro-componente' con la ruta real
+          this.router.navigate(['dashboard']);
         } else {
-          console.log("invalid data")
+          this.router.navigate(['login']);
         }
       }
     });

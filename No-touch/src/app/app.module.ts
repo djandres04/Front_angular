@@ -10,13 +10,17 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {InputTextModule} from "primeng/inputtext";
 import {PasswordModule} from "primeng/password";
 import {ButtonModule} from "primeng/button";
+import {RegisterComponent} from "./login/register/register.component";
+import {LostPasswordComponent} from "./login/lost-password/lost-password.component";
 import {TokenInterceptorService} from "./Services/token-interceptor.service";
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    RegisterComponent,
+    LostPasswordComponent
   ],
   imports: [
     BrowserModule,

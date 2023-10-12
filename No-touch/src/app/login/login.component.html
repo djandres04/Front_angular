@@ -4,7 +4,7 @@
   <form [formGroup]="formLogin">
    <div class="formated">
      <div class="username">
-       <input type="text" pInputText placeholder="Username" id="username" formControlName="valueUsername" >
+       <input type="text" pInputText placeholder="Email" id="email" formControlName="valueEmail" >
      </div>
      <div class="p-password">
        <p-password type="password" placeholder="Password" [feedback]="false" [toggleMask]="true" formControlName="valuePassword"></p-password>
@@ -13,7 +13,5 @@
        <p-button type="button" label="Login" (click)="loginPost()"></p-button>
      </div>
    </div>
-
   </form>
-
 </section>
