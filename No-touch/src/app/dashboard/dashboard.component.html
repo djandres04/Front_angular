@@ -1,1 +1,8 @@
-<p>dashboard works!</p>
+<div *ngIf="dataFromServer && dataFromServer.light">
+  <!-- Mostrar el componente Light -->
+  <app-light [lightData]="dataFromServer.light"></app-light>
+</div>
+<div *ngIf=" dataFromServer && dataFromServer.door">
+  <!-- Mostrar el componente Door -->
+  <app-door [doorData]="dataFromServer.door"></app-door>
+</div>

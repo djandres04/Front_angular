@@ -13,6 +13,11 @@ import {ButtonModule} from "primeng/button";
 import {RegisterComponent} from "./login/register/register.component";
 import {LostPasswordComponent} from "./login/lost-password/lost-password.component";
 import {TokenInterceptorService} from "./Services/token-interceptor.service";
+import {DeleteUserComponent} from "./login/delete-user/delete-user.component";
+import {UsersComponent} from "./login/users/users.component";
+import { LightComponent } from './dashboard/light/light.component';
+import { DoorComponent } from './dashboard/door/door.component';
+import { BuzzerComponent } from './dashboard/buzzer/buzzer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +25,12 @@ import {TokenInterceptorService} from "./Services/token-interceptor.service";
     LoginComponent,
     DashboardComponent,
     RegisterComponent,
-    LostPasswordComponent
+    LostPasswordComponent,
+    DeleteUserComponent,
+    UsersComponent,
+    LightComponent,
+    DoorComponent,
+    BuzzerComponent
   ],
   imports: [
     BrowserModule,

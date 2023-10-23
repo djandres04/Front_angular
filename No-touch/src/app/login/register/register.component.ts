@@ -73,5 +73,8 @@ export class RegisterComponent {
     return null;
   };
 
+  loginReg(){
+    this.router.navigate(['login'])
+  }
 
 }
